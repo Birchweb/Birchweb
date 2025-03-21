@@ -1,9 +1,9 @@
-
 import React from "react";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Code, Layout, Search, Settings, Smartphone, Zap } from "lucide-react";
 import ServiceCard from "@/components/ServiceCard";
 import Button from "@/components/Button";
+import FAQ from "@/components/FAQ";
 
 const Services: React.FC = () => {
   const mainServices = [
@@ -78,6 +78,29 @@ const Services: React.FC = () => {
         "Snelle iteraties en feedback",
         "Focus op essentiële functionaliteit"
       ]
+    }
+  ];
+
+  const faqItems = [
+    {
+      question: "Hoe lang duurt het om een website te bouwen?",
+      answer: "De meeste websites kunnen binnen 2-3 weken worden opgeleverd, afhankelijk van de complexiteit en jouw feedback. Eenvoudige landingspagina's kunnen soms zelfs binnen een week klaar zijn. Bij de start van het project krijg je een concrete tijdlijn."
+    },
+    {
+      question: "Hoe werkt het onderhoud van mijn website?",
+      answer: "Je kunt kiezen voor een onderhoudsabonnement waarbij ik regelmatig updates uitvoer, de veiligheid monitor en kleine wijzigingen doorvoer. Je kunt ook per keer betalen als je af en toe aanpassingen nodig hebt. Alle websites worden gebouwd met gebruiksvriendelijke tools zodat je zelf basis-aanpassingen kunt doen."
+    },
+    {
+      question: "Is mijn website goed vindbaar in Google?",
+      answer: "Alle websites worden standaard geoptimaliseerd voor zoekmachines (SEO). Dit betekent dat de technische basis goed is ingericht met de juiste meta-tags, snelle laadtijden en een responsive design. Voor uitgebreide SEO-campagnes en contentcreatie kan ik je doorverwijzen naar gespecialiseerde partners."
+    },
+    {
+      question: "Kan ik later mijn website uitbreiden?",
+      answer: "Absoluut! Alle websites worden modulair gebouwd, wat betekent dat ze eenvoudig uit te breiden zijn met nieuwe functies of secties. Of je nu later een blog, webshop of klantenportaal wilt toevoegen, de basis is daarop voorbereid."
+    },
+    {
+      question: "Wat kost een website bij Birchweb?",
+      answer: "De prijzen beginnen vanaf €750 voor een basic website. Kijk op de prijzenpagina voor een indicatie van de verschillende pakketten. Voor een exacte offerte op maat kun je vrijblijvend contact opnemen."
     }
   ];
 
@@ -200,6 +223,17 @@ const Services: React.FC = () => {
               </div>
             </AnimatedSection>
           </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <FAQ 
+            items={faqItems}
+            title="Veelgestelde vragen" 
+            description="Antwoorden op de meest gestelde vragen over mijn diensten en werkwijze. Staat jouw vraag er niet tussen? Neem dan gerust contact op."
+          />
         </div>
       </section>
 

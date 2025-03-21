@@ -82,12 +82,11 @@ const Navbar: React.FC = () => {
           </button>
         </div>
 
-        {/* Mobile navigation menu */}
+        {/* Mobile navigation menu - Fixed the background to always show regardless of scroll position */}
         <div
           className={cn(
             "md:hidden fixed inset-0 top-[57px] z-50 transition-all duration-300 ease-in-out",
-            // Added glassmorphism background for better readability
-            "bg-white/80 backdrop-blur-lg",
+            "bg-white/90 backdrop-blur-lg", // Increased opacity for better visibility
             isOpen ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-full pointer-events-none"
           )}
         >
