@@ -85,7 +85,9 @@ const Navbar: React.FC = () => {
         {/* Mobile navigation menu */}
         <div
           className={cn(
-            "md:hidden fixed inset-0 top-[57px] bg-white z-50 transition-all duration-300 ease-in-out",
+            "md:hidden fixed inset-0 top-[57px] z-50 transition-all duration-300 ease-in-out",
+            // Added glassmorphism background for better readability
+            "bg-white/80 backdrop-blur-lg",
             isOpen ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-full pointer-events-none"
           )}
         >
